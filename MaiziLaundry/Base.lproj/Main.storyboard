@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="OSh-vd-xPp">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="OSh-vd-xPp">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
         <!--Item 2-->
@@ -105,6 +105,9 @@
                                     <constraint firstAttribute="height" constant="80" id="c4m-Ty-1pd"/>
                                 </constraints>
                                 <state key="normal" backgroundImage="1-0"/>
+                                <connections>
+                                    <segue destination="f4H-h1-AgW" kind="show" id="Rym-So-3op"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XjX-21-6d7">
                                 <rect key="frame" x="12" y="393" width="296" height="55"/>
@@ -156,6 +159,111 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j9c-5S-jvc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="275" y="-1170"/>
+        </scene>
+        <!--Clothe Type Controller-->
+        <scene sceneID="hLh-QU-9WI">
+            <objects>
+                <viewController id="f4H-h1-AgW" customClass="ClotheTypeController" customModule="MaiziLaundry" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AI2-nV-Yne"/>
+                        <viewControllerLayoutGuide type="bottom" id="avf-oZ-0zX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XbR-XR-cs3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aez-dB-Rt1">
+                                <rect key="frame" x="0.0" y="64" width="320" height="45"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="voQ-cE-WNg"/>
+                                </constraints>
+                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="SOS-Dg-K1O">
+                                <rect key="frame" x="0.0" y="109" width="320" height="410"/>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="KDR-Nd-j69">
+                                    <size key="itemSize" width="146" height="154.5"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="clotheCell" reuseIdentifier="clotheCell" id="VM0-2d-mqb" customClass="ClotheCell" customModule="MaiziLaundry" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="146" height="154.5"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="146" height="154.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BZC-EC-ket">
+                                                    <rect key="frame" x="30" y="8" width="86" height="76"/>
+                                                </imageView>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fxv-XV-ahM">
+                                                    <rect key="frame" x="12" y="93" width="122" height="1"/>
+                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="1" id="5YS-Ac-JsI"/>
+                                                    </constraints>
+                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RMB 8" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aWj-de-Tqu">
+                                                    <rect key="frame" x="47" y="126" width="51" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="T 恤" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Ht-Vb-Kj4">
+                                                    <rect key="frame" x="57" y="97" width="32" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="aWj-de-Tqu" firstAttribute="top" secondItem="6Ht-Vb-Kj4" secondAttribute="bottom" constant="8" id="0Zg-o2-ur2"/>
+                                            <constraint firstAttribute="bottom" secondItem="aWj-de-Tqu" secondAttribute="bottom" constant="8" id="3my-5r-TA4"/>
+                                            <constraint firstAttribute="trailing" secondItem="fxv-XV-ahM" secondAttribute="trailing" constant="12" id="ELK-7E-Mpj"/>
+                                            <constraint firstItem="BZC-EC-ket" firstAttribute="top" secondItem="VM0-2d-mqb" secondAttribute="top" constant="8" id="ICz-PE-cON"/>
+                                            <constraint firstAttribute="trailing" secondItem="BZC-EC-ket" secondAttribute="trailing" constant="30" id="IMF-7D-gFe"/>
+                                            <constraint firstItem="6Ht-Vb-Kj4" firstAttribute="centerX" secondItem="aWj-de-Tqu" secondAttribute="centerX" id="Upi-Vf-OdP"/>
+                                            <constraint firstItem="fxv-XV-ahM" firstAttribute="top" secondItem="BZC-EC-ket" secondAttribute="bottom" constant="9" id="iJD-VV-Ems"/>
+                                            <constraint firstItem="BZC-EC-ket" firstAttribute="leading" secondItem="VM0-2d-mqb" secondAttribute="leading" constant="30" id="oON-O1-Rmd"/>
+                                            <constraint firstItem="fxv-XV-ahM" firstAttribute="leading" secondItem="VM0-2d-mqb" secondAttribute="leading" constant="12" id="uZK-UU-KGV"/>
+                                            <constraint firstItem="6Ht-Vb-Kj4" firstAttribute="top" secondItem="fxv-XV-ahM" secondAttribute="bottom" constant="3" id="vYK-Jb-fK4"/>
+                                            <constraint firstItem="aWj-de-Tqu" firstAttribute="centerX" secondItem="VM0-2d-mqb" secondAttribute="centerX" id="xhv-5L-0d2"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="clotheImage" destination="BZC-EC-ket" id="rhs-0T-elo"/>
+                                            <outlet property="clotheName" destination="6Ht-Vb-Kj4" id="e5M-zn-IGc"/>
+                                            <outlet property="price" destination="aWj-de-Tqu" id="ecE-0C-stg"/>
+                                            <outlet property="sepLine" destination="fxv-XV-ahM" id="fE4-x5-JTB"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Aez-dB-Rt1" firstAttribute="top" secondItem="AI2-nV-Yne" secondAttribute="bottom" id="GyC-PK-1DJ"/>
+                            <constraint firstAttribute="trailing" secondItem="SOS-Dg-K1O" secondAttribute="trailing" id="Mfm-0s-iW2"/>
+                            <constraint firstItem="SOS-Dg-K1O" firstAttribute="leading" secondItem="XbR-XR-cs3" secondAttribute="leading" id="Ulg-Ii-zIu"/>
+                            <constraint firstAttribute="trailing" secondItem="Aez-dB-Rt1" secondAttribute="trailing" id="VaP-3f-bxB"/>
+                            <constraint firstItem="Aez-dB-Rt1" firstAttribute="leading" secondItem="XbR-XR-cs3" secondAttribute="leading" id="W9W-3q-D8U"/>
+                            <constraint firstItem="SOS-Dg-K1O" firstAttribute="top" secondItem="Aez-dB-Rt1" secondAttribute="bottom" id="bmh-i2-csm"/>
+                            <constraint firstItem="avf-oZ-0zX" firstAttribute="top" secondItem="SOS-Dg-K1O" secondAttribute="bottom" id="rcK-T1-exa"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="collectionView" destination="SOS-Dg-K1O" id="HVU-Ve-COY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YPp-vc-J59" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="706" y="-1170"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="CWc-Gd-cF2">
