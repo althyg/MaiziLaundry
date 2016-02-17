@@ -12,7 +12,7 @@ import Alamofire
 class MZRequest: NSObject {
 
     static func getClothes(){
-        Alamofire.request(.GET, "http://cloud.bmob.cn/a674397687f4092418b24ac840409068/getJianXiClotheList?")
+        Alamofire.request(.GET, "http://cloud.bmob.cn/7c930767cf01bdb2/getJianXiClotheList?")
             .responseJSON { response in
                 print(response.request)  // original URL request
                 print(response.response) // URL response
