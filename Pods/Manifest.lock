@@ -1,0 +1,13 @@
+PODS:
+  - Alamofire (3.2.0)
+  - BmobSDK (1.6.6)
+
+DEPENDENCIES:
+  - Alamofire (~> 3.2.0)
+  - BmobSDK
+
+SPEC CHECKSUMS:
+  Alamofire: 4da478599fccddff361205c8929333d7fe18dceb
+  BmobSDK: c896d4ff3986f2b4fc8406fb2b801230f7419878
+
+COCOAPODS: 0.39.0

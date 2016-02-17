@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class ClotheTypeController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
 
     @IBOutlet weak var collectionView: UICollectionView!
@@ -17,12 +18,17 @@ class ClotheTypeController: UIViewController, UICollectionViewDataSource, UIColl
     override func viewDidLoad() {
         super.viewDidLoad()
 
-//        collectionView.registerClass(ClotheCell.self, forCellWithReuseIdentifier: "clotheCell")
+
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.backgroundColor = UIColor.whiteColor()
         
         images = ["J-0", "J-1", "J-2", "J-3"]
+        
+    }
+    
+    //MARK: - 获取数据
+    func getClotheList(){
         
     }
 
