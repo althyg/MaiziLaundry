@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+//import MZRequest
 
 class ClotheTypeController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
 
@@ -25,11 +25,14 @@ class ClotheTypeController: UIViewController, UICollectionViewDataSource, UIColl
         
         images = ["J-0", "J-1", "J-2", "J-3"]
         
+        
+        self.getClotheList()
     }
     
     //MARK: - 获取数据
     func getClotheList(){
         
+        MZRequest.getClothes()
     }
 
     override func didReceiveMemoryWarning() {
