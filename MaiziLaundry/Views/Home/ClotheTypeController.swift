@@ -7,13 +7,14 @@
 //
 
 import UIKit
-//import MZRequest
+
 
 class ClotheTypeController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
 
     @IBOutlet weak var collectionView: UICollectionView!
     
     var images: Array<String>?
+    var clotheArray = NSArray()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +22,7 @@ class ClotheTypeController: UIViewController, UICollectionViewDataSource, UIColl
 
         collectionView.delegate = self
         collectionView.dataSource = self
-        collectionView.backgroundColor = UIColor.whiteColor()
+        
         
         images = ["J-0", "J-1", "J-2", "J-3"]
         
@@ -32,7 +33,15 @@ class ClotheTypeController: UIViewController, UICollectionViewDataSource, UIColl
     //MARK: - 获取数据
     func getClotheList(){
         
-        MZRequest.getClothes()
+    
+        MZRequest.getClothes(success: { (clothes) -> Void in
+            
+            print(clothes)
+            self.clotheArray = clothes
+            self.collectionView.reloadData()
+            }) { (error) -> Void in
+                print(error)
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -40,24 +49,52 @@ class ClotheTypeController: UIViewController, UICollectionViewDataSource, UIColl
         // Dispose of any resources that can be recreated.
     }
     
+    
+    
+    //MARK: - collection 代理
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+        
         return 1
     }
 
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return 20
+        if clotheArray.count == 0 {
+            return 0
+        }
+        return clotheArray.count
     }
+    
+    
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
         let item = collectionView.dequeueReusableCellWithReuseIdentifier("clotheCell", forIndexPath: indexPath) as! ClotheCell
         
-        // 产生 0～4 之间的随机数，随机取图片
-        let diceFaceCount: UInt32 = 4
-        let randomRoll = Int(arc4random_uniform(diceFaceCount))
         
-        item.clotheImage.image = UIImage(named: images![randomRoll])
+        
+        let dic = clotheArray.objectAtIndex(indexPath.row) as! NSDictionary
+        
+        // 衣服单件图片
+        var imageUrl = dic["clothe"]! as! NSString
+        imageUrl = imageUrl.stringByRemovingPercentEncoding!
+        
+        let url:NSURL = NSURL(string: imageUrl as String)!
+        let data = NSData(contentsOfURL: url)
+
+        // 名称
+        let aName = dic["name"]! as! String
+        item.clotheName.text = aName
+        
+        
+        // 价格
+        let aPrice = dic["price"]! as! String
+        item.price.text = "\(aPrice) RMB"
+        
+        
+        
+        
+        item.clotheImage.image = UIImage(data: data!)
         
         return item
     }

@@ -76,6 +76,7 @@
 		20723E141C5A01F3007E5013 /* MaiziLaundry */ = {
 			isa = PBXGroup;
 			children = (
+				20893E871C7457A200394CB0 /* Action */,
 				20F6B8081C6084FE004834F9 /* Views */,
 				20723E151C5A01F3007E5013 /* AppDelegate.swift */,
 				20723E191C5A01F3007E5013 /* Main.storyboard */,
@@ -92,13 +93,13 @@
 			children = (
 				20893E8A1C74585100394CB0 /* MZRequest.swift */,
 			);
-			path = Action;
+			name = Action;
+			path = Views/Action;
 			sourceTree = "<group>";
 		};
 		20F6B8081C6084FE004834F9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				20893E871C7457A200394CB0 /* Action */,
 				20F6B8091C6084FE004834F9 /* Home */,
 			);
 			path = Views;
