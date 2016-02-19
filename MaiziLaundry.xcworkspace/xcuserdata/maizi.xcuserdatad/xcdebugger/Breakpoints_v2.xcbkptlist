@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MaiziLaundry/Views/Home/ClotheTypeController.swift"
-            timestampString = "477544414.313907"
+            timestampString = "477575236.367916"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
             landmarkName = "getClotheList()"
             landmarkType = "5">
          </BreakpointContent>

@@ -13,7 +13,7 @@ class ClotheTypeController: UIViewController, UICollectionViewDataSource, UIColl
 
     @IBOutlet weak var collectionView: UICollectionView!
     
-    var images: Array<String>?
+    // 单件数组
     var clotheArray = NSArray()
     
     override func viewDidLoad() {
@@ -24,9 +24,7 @@ class ClotheTypeController: UIViewController, UICollectionViewDataSource, UIColl
         collectionView.dataSource = self
         
         
-        images = ["J-0", "J-1", "J-2", "J-3"]
-        
-        
+        // 从服务器拿数据
         self.getClotheList()
     }
     
@@ -36,10 +34,16 @@ class ClotheTypeController: UIViewController, UICollectionViewDataSource, UIColl
     
         MZRequest.getClothes(success: { (clothes) -> Void in
             
+            // 请求成功
             print(clothes)
             self.clotheArray = clothes
+            
+            // 重新渲染 collectionView
             self.collectionView.reloadData()
+            
             }) { (error) -> Void in
+                
+                // 请求失败
                 print(error)
         }
     }
@@ -51,7 +55,7 @@ class ClotheTypeController: UIViewController, UICollectionViewDataSource, UIColl
     
     
     
-    //MARK: - collection 代理
+    //MARK: - collectionView 代理方法
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         
         return 1
@@ -59,6 +63,7 @@ class ClotheTypeController: UIViewController, UICollectionViewDataSource, UIColl
 
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
+        // 第一次加载 时为零
         if clotheArray.count == 0 {
             return 0
         }
@@ -74,6 +79,7 @@ class ClotheTypeController: UIViewController, UICollectionViewDataSource, UIColl
         
         
         let dic = clotheArray.objectAtIndex(indexPath.row) as! NSDictionary
+        
         
         // 衣服单件图片
         var imageUrl = dic["clothe"]! as! NSString
