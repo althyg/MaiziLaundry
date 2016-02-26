@@ -70,7 +70,7 @@ class ClotheTypeController: UIViewController, UICollectionViewDataSource, UIColl
         return clotheArray.count
     }
     
-    
+
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
@@ -105,12 +105,18 @@ class ClotheTypeController: UIViewController, UICollectionViewDataSource, UIColl
         return item
     }
     
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
-        
-        let width = (CGRectGetWidth(self.collectionView.frame)-16)/2
-        let itemSize = CGSizeMake(width, 180)
-        return itemSize
-    }
+    // 简单布局 item
+//    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
+//        
+//        let width = (CGRectGetWidth(self.collectionView.frame)-16)/2
+//        let itemSize = CGSizeMake(width, 180)
+//        return itemSize
+//    }
+    
+    
+    
+    
+    
     
     
     /*

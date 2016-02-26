@@ -39,7 +39,7 @@ class MZRequest: NSObject {
     
     static func getClothes(success succeed:(clothes: NSArray) -> Void, failure failed:(error:NSError) -> Void) -> Void {
         
-        Alamofire.request(.GET, "http://cloud.bmob.cn/7c930767cf01bdb2/getJianXiClotheList?")
+        Alamofire.request(.GET, "http://cloud.bmob.cn/7c930767cf01bdb2/index?")
             
             .responseJSON { (response) -> Void in
                 
@@ -63,11 +63,4 @@ class MZRequest: NSObject {
         }
     }
     
-    func aa() {
-        Alamofire.request(.GET, "")
-        
-        .responseJSON { (response) -> Void in
-            
-        }
-    }
 }
