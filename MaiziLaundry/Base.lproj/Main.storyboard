@@ -70,11 +70,112 @@
                     <view key="view" contentMode="scaleToFill" id="ePI-1R-Tfh">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="82" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="K0z-yj-ZoH">
+                                <rect key="frame" x="0.0" y="64" width="318" height="455"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="laundryCell" rowHeight="82" id="I61-yY-dtH" customClass="LaundryBacketCell" customModule="MaiziLaundry" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="92" width="318" height="82"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="I61-yY-dtH" id="w1X-qr-ynd">
+                                            <rect key="frame" x="0.0" y="0.0" width="318" height="81.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qdp-fG-8XG">
+                                                    <rect key="frame" x="8" y="10" width="61" height="61"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hQk-Rw-hL3">
+                                                    <rect key="frame" x="76" y="8" width="43" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j2D-YX-AvH">
+                                                    <rect key="frame" x="123" y="42" width="98" height="29"/>
+                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="RMB 8" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5LV-q6-EhJ">
+                                                    <rect key="frame" x="229" y="46" width="51" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vqh-0u-4K7">
+                                                    <rect key="frame" x="280" y="4" width="30" height="30"/>
+                                                    <state key="normal" title="删除"/>
+                                                </button>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LFullPayCell" rowHeight="51" id="ET7-cU-8TI" customClass="LFullPayCell">
+                                        <rect key="frame" x="0.0" y="174" width="318" height="51"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ET7-cU-8TI" id="vK3-kn-ZH1">
+                                            <rect key="frame" x="0.0" y="0.0" width="318" height="50.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="费用总计：RMB 80" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ndm-9i-uBf">
+                                                    <rect key="frame" x="158" y="15" width="147" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LaundryDiscountCell" rowHeight="132" id="Wlb-l2-mWM" customClass="LaundryDiscountCell" customModule="MaiziLaundry" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="225" width="318" height="132"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Wlb-l2-mWM" id="UCs-mV-gOL">
+                                            <rect key="frame" x="0.0" y="0.0" width="318" height="131.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="DJJ01" translatesAutoresizingMaskIntoConstraints="NO" id="CJU-6s-jch">
+                                                    <rect key="frame" x="18" y="8" width="240" height="72"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="合计 50" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4JT-pq-UUs">
+                                                    <rect key="frame" x="233" y="97" width="69" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="LUserProfileCell" rowHeight="47" id="5Qv-wN-Wlt" customClass="LUserProfileCell" customModule="MaiziLaundry" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="357" width="318" height="47"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5Qv-wN-Wlt" id="4Lt-Il-s1a">
+                                            <rect key="frame" x="0.0" y="0.0" width="285" height="46.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BgN-et-w2s">
+                                                    <rect key="frame" x="17" y="13" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="YMs-UF-WNT" firstAttribute="top" secondItem="K0z-yj-ZoH" secondAttribute="bottom" id="Jnd-G1-SSZ"/>
+                            <constraint firstItem="K0z-yj-ZoH" firstAttribute="leading" secondItem="ePI-1R-Tfh" secondAttribute="leading" id="Ocm-L7-UDf"/>
+                            <constraint firstAttribute="trailing" secondItem="K0z-yj-ZoH" secondAttribute="trailing" constant="2" id="ksz-kf-Vc0"/>
+                            <constraint firstItem="K0z-yj-ZoH" firstAttribute="top" secondItem="R4n-QP-gdY" secondAttribute="bottom" id="yZD-e0-sEr"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="JXq-lm-Fv6"/>
                     <navigationItem key="navigationItem" id="MKt-q9-Qwl"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="backetTableVIew" destination="K0z-yj-ZoH" id="yoa-oO-xCd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PPY-iS-zSb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -382,5 +483,6 @@
         <image name="3-0" width="580" height="130"/>
         <image name="4-0" width="580" height="130"/>
         <image name="5" width="580" height="130"/>
+        <image name="DJJ01" width="584" height="158"/>
     </resources>
 </document>

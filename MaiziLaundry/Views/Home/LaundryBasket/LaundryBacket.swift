@@ -8,12 +8,17 @@
 
 import UIKit
 
-class LaundryBacket: UIViewController {
+class LaundryBacket: UIViewController,UITableViewDelegate, UITableViewDataSource {
 
+    @IBOutlet weak var backetTableVIew: UITableView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        
+        backetTableVIew.delegate = self
+        backetTableVIew.dataSource = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,14 +27,35 @@ class LaundryBacket: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    //MARK: - talbe 代理方法
+    // 分组－－－－两组
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        
+        return 1
     }
-    */
+    
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        
+        return 6
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        var cell: UITableViewCell?
+        
+        if indexPath.row == 5 {
+            cell = tableView.dequeueReusableCellWithIdentifier("LUserProfileCell", forIndexPath: indexPath)
+        } else if indexPath.row == 4 {
+            cell = tableView.dequeueReusableCellWithIdentifier("LaundryDiscountCell", forIndexPath: indexPath)
+        } else if indexPath.row == 3 {
+            cell = tableView.dequeueReusableCellWithIdentifier("LFullPayCell", forIndexPath: indexPath)
+        } else {
+            cell = tableView.dequeueReusableCellWithIdentifier("laundryCell", forIndexPath: indexPath)
+        }
+        
 
+        
+        return cell!
+    }
 }
