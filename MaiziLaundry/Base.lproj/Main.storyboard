@@ -82,7 +82,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="318" height="81.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qdp-fG-8XG">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="J-0" translatesAutoresizingMaskIntoConstraints="NO" id="Qdp-fG-8XG">
                                                     <rect key="frame" x="8" y="10" width="61" height="61"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hQk-Rw-hL3">
@@ -91,7 +91,7 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j2D-YX-AvH">
+                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j2D-YX-AvH" customClass="ClotheNumberView" customModule="MaiziLaundry" customModuleProvider="target">
                                                     <rect key="frame" x="123" y="42" width="98" height="29"/>
                                                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 </view>
@@ -107,6 +107,11 @@
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="clothImageView" destination="Qdp-fG-8XG" id="q3A-De-aSM"/>
+                                            <outlet property="clotheNameLabel" destination="hQk-Rw-hL3" id="N0q-fH-Uhc"/>
+                                            <outlet property="clotheNumberV" destination="j2D-YX-AvH" id="WCt-Un-m5n"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LFullPayCell" rowHeight="51" id="ET7-cU-8TI" customClass="LFullPayCell">
                                         <rect key="frame" x="0.0" y="174" width="318" height="51"/>
@@ -484,5 +489,6 @@
         <image name="4-0" width="580" height="130"/>
         <image name="5" width="580" height="130"/>
         <image name="DJJ01" width="584" height="158"/>
+        <image name="J-0" width="126" height="140"/>
     </resources>
 </document>

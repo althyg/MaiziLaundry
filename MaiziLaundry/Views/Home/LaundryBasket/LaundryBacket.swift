@@ -15,7 +15,6 @@ class LaundryBacket: UIViewController,UITableViewDelegate, UITableViewDataSource
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         
         backetTableVIew.delegate = self
         backetTableVIew.dataSource = self
@@ -34,7 +33,6 @@ class LaundryBacket: UIViewController,UITableViewDelegate, UITableViewDataSource
         return 1
     }
     
-    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         
@@ -42,6 +40,7 @@ class LaundryBacket: UIViewController,UITableViewDelegate, UITableViewDataSource
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
         var cell: UITableViewCell?
         
         if indexPath.row == 5 {
@@ -51,7 +50,30 @@ class LaundryBacket: UIViewController,UITableViewDelegate, UITableViewDataSource
         } else if indexPath.row == 3 {
             cell = tableView.dequeueReusableCellWithIdentifier("LFullPayCell", forIndexPath: indexPath)
         } else {
+            
             cell = tableView.dequeueReusableCellWithIdentifier("laundryCell", forIndexPath: indexPath)
+            let loundryCell = cell as! LaundryBacketCell
+//            print(loundryCell.clothImageView)
+            
+            
+            if indexPath.row == 0 {
+                
+                loundryCell.clothImageView.image = UIImage(named: "J-0")
+                loundryCell.clotheNameLabel.text = "夹克"
+                loundryCell.clotheNumberV.numberOfClothe.text = "10"
+            } else if indexPath.row == 1 {
+                loundryCell.clothImageView.image = UIImage(named: "J-1")
+                loundryCell.clotheNameLabel.text = "衬衫"
+                loundryCell.clotheNumberV.numberOfClothe.text = "15"
+            } else {
+                loundryCell.clothImageView.image = UIImage(named: "J-2")
+                loundryCell.clotheNameLabel.text = "皮衣"
+                loundryCell.clotheNumberV.numberOfClothe.text = "8"
+            }
+            
+            loundryCell.selectionStyle = UITableViewCellSelectionStyle.None
+            return loundryCell
+            
         }
         
 
