@@ -40,7 +40,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gW5-nO-Jme" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-466" y="-1145"/>
+            <point key="canvasLocation" x="-808" y="-1184"/>
         </scene>
         <!--洗衣篮-->
         <scene sceneID="XwN-En-5cH">
@@ -186,6 +186,92 @@
             </objects>
             <point key="canvasLocation" x="462" y="-304"/>
         </scene>
+        <!--Wash Bag Controller-->
+        <scene sceneID="CyI-Yz-cn8">
+            <objects>
+                <viewController storyboardIdentifier="washBagVC" id="jjJ-S6-sbf" customClass="WashBagController" customModule="MaiziLaundry" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wen-zD-2i4"/>
+                        <viewControllerLayoutGuide type="bottom" id="qD4-Ok-pzC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EBr-fD-Zsi">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KwR-zS-GXN" userLabel="blackView">
+                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="GgA-f1-R9M" appends="YES" id="3lb-SS-H00"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vnx-rz-gXl">
+                                <rect key="frame" x="10" y="248" width="300" height="270"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="D-6" translatesAutoresizingMaskIntoConstraints="NO" id="5u7-Dk-2hm">
+                                        <rect key="frame" x="8" y="8" width="99" height="96"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="68／袋" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u85-H3-ZPv">
+                                        <rect key="frame" x="115" y="45" width="55" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="袋洗" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yCn-Hv-n8G">
+                                        <rect key="frame" x="115" y="16" width="34" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="装多少阿凡达睡觉咯阿萨德减肥 i 哦额挖掘佛 is 的减肥我就佛 i 啊电视剧发低烧减肥 i 快点减肥 i 哦减肥 i 阿萨德看来放假诶了五块" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="qQ9-mN-hw1">
+                                        <rect key="frame" x="115" y="79" width="177" height="58"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sfn-qh-b4A">
+                                        <rect key="frame" x="22" y="142" width="240" height="48"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zbg-6t-yay">
+                                        <rect key="frame" x="32" y="212" width="220" height="34"/>
+                                        <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="加入购物车"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="270" id="KBy-n5-ySl"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="Vnx-rz-gXl" firstAttribute="leading" secondItem="EBr-fD-Zsi" secondAttribute="leading" constant="10" id="8bE-CF-kk2"/>
+                            <constraint firstItem="qD4-Ok-pzC" firstAttribute="top" secondItem="KwR-zS-GXN" secondAttribute="bottom" id="CKb-W5-2KA"/>
+                            <constraint firstItem="qD4-Ok-pzC" firstAttribute="top" secondItem="Vnx-rz-gXl" secondAttribute="bottom" constant="50" id="FTk-eP-m2p"/>
+                            <constraint firstAttribute="trailing" secondItem="Vnx-rz-gXl" secondAttribute="trailing" constant="10" id="TvX-Ow-fcw"/>
+                            <constraint firstItem="KwR-zS-GXN" firstAttribute="top" secondItem="wen-zD-2i4" secondAttribute="bottom" id="kQ4-qr-All"/>
+                            <constraint firstItem="KwR-zS-GXN" firstAttribute="leading" secondItem="EBr-fD-Zsi" secondAttribute="leading" id="rLv-Mm-3w9"/>
+                            <constraint firstAttribute="trailing" secondItem="KwR-zS-GXN" secondAttribute="trailing" id="x8F-qn-8vK"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="backgroundBlackView" destination="KwR-zS-GXN" id="Xue-vH-YfS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jHg-kf-xHa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="GgA-f1-R9M">
+                    <connections>
+                        <action selector="hideWashBag:" destination="jjJ-S6-sbf" id="waF-Cu-QDr"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-228" y="-1826"/>
+        </scene>
         <!--首页-->
         <scene sceneID="OHK-f1-7hb">
             <objects>
@@ -226,6 +312,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1oX-v7-wQn">
                                 <rect key="frame" x="166" y="236" width="142" height="80"/>
                                 <state key="normal" backgroundImage="2-0"/>
+                                <connections>
+                                    <action selector="washBagButtonPressed:" destination="aZr-hI-UFC" eventType="touchUpInside" id="OG6-yX-GE3"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SEh-G2-w9M">
                                 <rect key="frame" x="12" y="330" width="296" height="55"/>
@@ -264,7 +353,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j9c-5S-jvc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="275" y="-1170"/>
+            <point key="canvasLocation" x="-177" y="-1184"/>
         </scene>
         <!--Clothe Type Controller-->
         <scene sceneID="hLh-QU-9WI">
@@ -369,7 +458,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YPp-vc-J59" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="706" y="-1170"/>
+            <point key="canvasLocation" x="330" y="-1184"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="CWc-Gd-cF2">
@@ -412,33 +501,6 @@
             </objects>
             <point key="canvasLocation" x="730" y="1582"/>
         </scene>
-        <!--首页-->
-        <scene sceneID="TNq-KF-n65">
-            <objects>
-                <navigationController id="Yxf-8o-ecF" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="首页" id="Zq7-p9-dOe"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1d8-0t-JBl">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="JYF-gS-aNb" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-466" y="-1145"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="wIG-zT-hfb">
-            <objects>
-                <navigationController id="nox-I4-4Np" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QGt-BS-kYb">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Dge-CO-hj5" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-466" y="-1145"/>
-        </scene>
         <!--我的-->
         <scene sceneID="YFR-6Z-9c5">
             <objects>
@@ -454,7 +516,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pNV-rX-OqP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-258" y="486"/>
+            <point key="canvasLocation" x="-350" y="448"/>
         </scene>
         <!--更多-->
         <scene sceneID="haT-w1-Q23">
@@ -488,6 +550,7 @@
         <image name="3-0" width="580" height="130"/>
         <image name="4-0" width="580" height="130"/>
         <image name="5" width="580" height="130"/>
+        <image name="D-6" width="126" height="140"/>
         <image name="DJJ01" width="584" height="158"/>
         <image name="J-0" width="126" height="140"/>
     </resources>

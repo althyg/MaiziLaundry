@@ -31,7 +31,6 @@ class ClotheTypeController: UIViewController, UICollectionViewDataSource, UIColl
     //MARK: - 获取数据
     func getClotheList(){
         
-    
         MZRequest.getClothes(success: { (clothes) -> Void in
             
             // 请求成功

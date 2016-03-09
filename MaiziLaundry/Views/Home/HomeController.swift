@@ -10,10 +10,18 @@ import UIKit
 
 class HomeController: UIViewController {
 
+    var washBagVC: WashBagController?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.navigationItem.title = "麦子洗衣"
+        
+        
+        washBagVC = self.storyboard?.instantiateViewControllerWithIdentifier("washBagVC") as? WashBagController
+        self.addChildViewController(washBagVC!)
+        washBagVC!.view.hidden = true
+        self.view.addSubview((washBagVC?.view)!)
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,14 +30,21 @@ class HomeController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    
+    @IBAction func washBagButtonPressed(sender: UIButton) {
+        
+        print("")
+        
+        if washBagVC!.view.superview == nil {
+            self.view.addSubview((washBagVC?.view)!)
+        }
+        
+        washBagVC!.view.hidden = false
+        
+//        [UIView.animateWithDuration(0.25) { () -> Void in
+//            
+//        }]
+    
     }
-    */
-
 }
