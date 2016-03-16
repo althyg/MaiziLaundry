@@ -25,7 +25,7 @@ class ClotheTypeController: UIViewController, UICollectionViewDataSource, UIColl
         
         
         // 从服务器拿数据
-//        self.getClotheList()
+        self.getClotheList()
     }
     
     //MARK: - 获取数据

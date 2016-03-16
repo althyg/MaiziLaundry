@@ -21,6 +21,7 @@
 		20C2CEC21C80862F0096BEC1 /* LFullPayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C2CEC11C80862F0096BEC1 /* LFullPayCell.swift */; };
 		20C2CEC41C8086830096BEC1 /* LaundryDiscountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C2CEC31C8086830096BEC1 /* LaundryDiscountCell.swift */; };
 		20C2CEC61C8086A90096BEC1 /* LUserProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C2CEC51C8086A90096BEC1 /* LUserProfileCell.swift */; };
+		20F115351C994A27008977E9 /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F115341C994A27008977E9 /* UserController.swift */; };
 		20F6B80B1C608518004834F9 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F6B80A1C608518004834F9 /* HomeController.swift */; };
 		20F6B80F1C6093F3004834F9 /* ClotheCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F6B80E1C6093F3004834F9 /* ClotheCell.swift */; };
 /* End PBXBuildFile section */
@@ -42,6 +43,7 @@
 		20C2CEC11C80862F0096BEC1 /* LFullPayCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LFullPayCell.swift; sourceTree = "<group>"; };
 		20C2CEC31C8086830096BEC1 /* LaundryDiscountCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaundryDiscountCell.swift; sourceTree = "<group>"; };
 		20C2CEC51C8086A90096BEC1 /* LUserProfileCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LUserProfileCell.swift; sourceTree = "<group>"; };
+		20F115341C994A27008977E9 /* UserController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
 		20F6B80A1C608518004834F9 /* HomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		20F6B80E1C6093F3004834F9 /* ClotheCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClotheCell.swift; sourceTree = "<group>"; };
 		2256FA88476D4988D4D071A2 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -133,9 +135,18 @@
 			path = Home/LaundryBasket;
 			sourceTree = "<group>";
 		};
+		20F115331C994A0A008977E9 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				20F115341C994A27008977E9 /* UserController.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
 		20F6B8081C6084FE004834F9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				20F115331C994A0A008977E9 /* User */,
 				20C2CEB51C803A090096BEC1 /* JianXi */,
 				20C2CEBA1C80460A0096BEC1 /* LaundryBasket */,
 				20F6B8091C6084FE004834F9 /* Home */,
@@ -290,6 +301,7 @@
 				20C2CEC41C8086830096BEC1 /* LaundryDiscountCell.swift in Sources */,
 				20C2CEC21C80862F0096BEC1 /* LFullPayCell.swift in Sources */,
 				20C2CEB71C803A320096BEC1 /* ClotheTypeController.swift in Sources */,
+				20F115351C994A27008977E9 /* UserController.swift in Sources */,
 				20C2CEC01C8081530096BEC1 /* LaundryBacketCell.swift in Sources */,
 				20C2CEBC1C8046740096BEC1 /* LaundryBacket.swift in Sources */,
 				20893E8B1C74585100394CB0 /* MZRequest.swift in Sources */,
