@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0D9051A14CF903C4D54551DE /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2256FA88476D4988D4D071A2 /* Pods.framework */; };
 		205691151C904AE8000672C3 /* WashBagController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205691141C904AE8000672C3 /* WashBagController.swift */; };
+		205ED9031C9BDEDE001D7A00 /* MoreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205ED9021C9BDEDE001D7A00 /* MoreController.swift */; };
+		205ED9051C9BE38C001D7A00 /* MoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205ED9041C9BE38C001D7A00 /* MoreCell.swift */; };
 		20723E161C5A01F3007E5013 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20723E151C5A01F3007E5013 /* AppDelegate.swift */; };
 		20723E1B1C5A01F3007E5013 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20723E191C5A01F3007E5013 /* Main.storyboard */; };
 		20723E1D1C5A01F3007E5013 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20723E1C1C5A01F3007E5013 /* Assets.xcassets */; };
@@ -28,6 +30,8 @@
 
 /* Begin PBXFileReference section */
 		205691141C904AE8000672C3 /* WashBagController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WashBagController.swift; sourceTree = "<group>"; };
+		205ED9021C9BDEDE001D7A00 /* MoreController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreController.swift; sourceTree = "<group>"; };
+		205ED9041C9BE38C001D7A00 /* MoreCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreCell.swift; sourceTree = "<group>"; };
 		20723E121C5A01F2007E5013 /* MaiziLaundry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MaiziLaundry.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20723E151C5A01F3007E5013 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		20723E1A1C5A01F3007E5013 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -69,6 +73,15 @@
 				2256FA88476D4988D4D071A2 /* Pods.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		205ED9011C9BDECA001D7A00 /* More */ = {
+			isa = PBXGroup;
+			children = (
+				205ED9021C9BDEDE001D7A00 /* MoreController.swift */,
+				205ED9041C9BE38C001D7A00 /* MoreCell.swift */,
+			);
+			path = More;
 			sourceTree = "<group>";
 		};
 		20723E091C5A01F2007E5013 = {
@@ -150,6 +163,7 @@
 				20C2CEB51C803A090096BEC1 /* JianXi */,
 				20C2CEBA1C80460A0096BEC1 /* LaundryBasket */,
 				20F6B8091C6084FE004834F9 /* Home */,
+				205ED9011C9BDECA001D7A00 /* More */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -298,8 +312,10 @@
 			files = (
 				20C2CEB91C803B770096BEC1 /* MLMenuView.swift in Sources */,
 				20F6B80B1C608518004834F9 /* HomeController.swift in Sources */,
+				205ED9031C9BDEDE001D7A00 /* MoreController.swift in Sources */,
 				20C2CEC41C8086830096BEC1 /* LaundryDiscountCell.swift in Sources */,
 				20C2CEC21C80862F0096BEC1 /* LFullPayCell.swift in Sources */,
+				205ED9051C9BE38C001D7A00 /* MoreCell.swift in Sources */,
 				20C2CEB71C803A320096BEC1 /* ClotheTypeController.swift in Sources */,
 				20F115351C994A27008977E9 /* UserController.swift in Sources */,
 				20C2CEC01C8081530096BEC1 /* LaundryBacketCell.swift in Sources */,

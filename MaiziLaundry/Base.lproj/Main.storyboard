@@ -595,7 +595,7 @@
         <!--Item-->
         <scene sceneID="fLb-lf-rRC">
             <objects>
-                <viewController id="kUY-Ab-I0J" sceneMemberID="viewController">
+                <viewController id="kUY-Ab-I0J" customClass="MoreController" customModule="MaiziLaundry" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jjK-MB-4fF"/>
                         <viewControllerLayoutGuide type="bottom" id="7cu-Ud-QKJ"/>
@@ -603,10 +603,36 @@
                     <view key="view" contentMode="scaleToFill" id="Am2-gX-rCZ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="39" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VbR-vy-GXv">
+                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="moreCell" rowHeight="44" id="UOe-Ep-N5s" customClass="MoreCell" customModule="MaiziLaundry" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="92" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UOe-Ep-N5s" id="Vdm-I9-gkn">
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="VbR-vy-GXv" firstAttribute="leading" secondItem="Am2-gX-rCZ" secondAttribute="leading" id="6FO-An-kyZ"/>
+                            <constraint firstItem="7cu-Ud-QKJ" firstAttribute="top" secondItem="VbR-vy-GXv" secondAttribute="bottom" id="HSV-vm-wjH"/>
+                            <constraint firstItem="VbR-vy-GXv" firstAttribute="top" secondItem="jjK-MB-4fF" secondAttribute="bottom" id="LuS-bT-7Hx"/>
+                            <constraint firstAttribute="trailing" secondItem="VbR-vy-GXv" secondAttribute="trailing" id="gtb-9n-y4T"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="hhw-cL-SdY"/>
                     <navigationItem key="navigationItem" id="rUX-ob-u6Q"/>
+                    <connections>
+                        <outlet property="tabelView" destination="VbR-vy-GXv" id="MZu-Ki-gEz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wCF-GP-e2w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
