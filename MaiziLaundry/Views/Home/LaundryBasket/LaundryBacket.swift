@@ -18,6 +18,9 @@ class LaundryBacket: UIViewController,UITableViewDelegate, UITableViewDataSource
         
         backetTableVIew.delegate = self
         backetTableVIew.dataSource = self
+        
+        print(backetTableVIew.frame)
+        backetTableVIew.backgroundColor = UIColor.orangeColor()
     }
 
     override func didReceiveMemoryWarning() {
