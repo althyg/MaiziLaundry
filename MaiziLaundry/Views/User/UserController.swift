@@ -30,7 +30,7 @@ class UserController: UIViewController {
     func addButtons() {
         
         let width = CGRectGetWidth(self.view.frame)/3
-        let height = CGRectGetWidth(self.view.frame)/3 + 80
+        let height = CGRectGetWidth(self.view.frame)/3 + 30
         var index = 0
         
         var origionY = CGRectGetMaxY(self.userProfileView.frame)
@@ -61,10 +61,10 @@ class UserController: UIViewController {
             
             let btn = UIButton(type: .Custom)
             btn.tag = index
-            btn.frame = CGRectMake((CGRectGetWidth(view.frame)-142)/2,
-                0,
-                142,
-                142)
+            btn.frame = CGRectMake(20,
+                10,
+                (CGRectGetWidth(view.frame)-40),
+                (CGRectGetWidth(view.frame)-40))
             btn.setImage(UIImage(named: iamgeName), forState: .Normal)
             btn.addTarget(self, action: "buttonPressed:", forControlEvents: .TouchUpInside)
             
@@ -79,7 +79,6 @@ class UserController: UIViewController {
             
             print(index)
             index++
-            
         }
     }
     
