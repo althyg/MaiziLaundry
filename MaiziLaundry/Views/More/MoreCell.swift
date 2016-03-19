@@ -24,7 +24,7 @@ class MoreCell: UITableViewCell {
       
         print("")
         
-        lineView = UIView(frame: CGRectMake(0, 0, CGRectGetWidth(self.frame), 1))
+        lineView = UIView(frame: CGRectMake(0, CGRectGetHeight(self.frame)-1, CGRectGetWidth(self.frame), 1))
         lineView?.backgroundColor = UIColor.grayColor()
         self.addSubview(lineView!)
     }
