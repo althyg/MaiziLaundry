@@ -16,21 +16,49 @@ class ClotheTypeController: UIViewController, UICollectionViewDataSource, UIColl
     // 单件数组
     var clotheArray = NSArray()
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-
         collectionView.delegate = self
         collectionView.dataSource = self
-        
-        
         // 从服务器拿数据
-//        self.getClotheList()
+        self.getClotheList()
+        
+        print("UI 加载到内存结束  001")
     }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        print("界面将要显示  002")
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        print("界面已经显示 003")
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        print("界面将要隐藏 004")
+    }
+    
+    override func viewDidDisappear(animated: Bool) {
+        super.viewDidDisappear(animated)
+        print("界面已经被显示 005")
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     //MARK: - 获取数据
     func getClotheList(){
-        
         MZRequest.getClothes(success: { (clothes) -> Void in
             
             // 请求成功
@@ -81,19 +109,19 @@ class ClotheTypeController: UIViewController, UICollectionViewDataSource, UIColl
         
         
         // 衣服单件图片
-        var imageUrl = dic["clothe"]! as! NSString
+        var imageUrl = dic["clotheImage"]! as! NSString
         imageUrl = imageUrl.stringByRemovingPercentEncoding!
         
         let url:NSURL = NSURL(string: imageUrl as String)!
         let data = NSData(contentsOfURL: url)
 
         // 名称
-        let aName = dic["name"]! as! String
+        let aName = dic["clotheName"]! as! String
         item.clotheName.text = aName
         
         
         // 价格
-        let aPrice = dic["price"]! as! String
+        let aPrice = dic["clothePrice"]! as! String
         item.price.text = "\(aPrice) RMB"
         
         

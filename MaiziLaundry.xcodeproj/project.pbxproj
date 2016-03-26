@@ -16,6 +16,7 @@
 		20723E1D1C5A01F3007E5013 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20723E1C1C5A01F3007E5013 /* Assets.xcassets */; };
 		20723E201C5A01F3007E5013 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20723E1E1C5A01F3007E5013 /* LaunchScreen.storyboard */; };
 		20893E8B1C74585100394CB0 /* MZRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20893E8A1C74585100394CB0 /* MZRequest.swift */; };
+		20B9734F1CA6A30200A9ADE9 /* C001.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 20B9734E1CA6A30200A9ADE9 /* C001.jpeg */; };
 		20C2CEB71C803A320096BEC1 /* ClotheTypeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C2CEB61C803A320096BEC1 /* ClotheTypeController.swift */; };
 		20C2CEB91C803B770096BEC1 /* MLMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C2CEB81C803B770096BEC1 /* MLMenuView.swift */; };
 		20C2CEBC1C8046740096BEC1 /* LaundryBacket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C2CEBB1C8046740096BEC1 /* LaundryBacket.swift */; };
@@ -40,6 +41,7 @@
 		20723E211C5A01F3007E5013 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		20893E6B1C72C89600394CB0 /* OC-Swift-BridgeHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "OC-Swift-BridgeHeader.h"; path = "../OC-Swift-BridgeHeader.h"; sourceTree = "<group>"; };
 		20893E8A1C74585100394CB0 /* MZRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MZRequest.swift; sourceTree = "<group>"; };
+		20B9734E1CA6A30200A9ADE9 /* C001.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = C001.jpeg; sourceTree = "<group>"; };
 		20C2CEB61C803A320096BEC1 /* ClotheTypeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClotheTypeController.swift; sourceTree = "<group>"; };
 		20C2CEB81C803B770096BEC1 /* MLMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MLMenuView.swift; sourceTree = "<group>"; };
 		20C2CEBB1C8046740096BEC1 /* LaundryBacket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaundryBacket.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 				20723E1E1C5A01F3007E5013 /* LaunchScreen.storyboard */,
 				20893E6B1C72C89600394CB0 /* OC-Swift-BridgeHeader.h */,
 				20723E211C5A01F3007E5013 /* Info.plist */,
+				20B9734E1CA6A30200A9ADE9 /* C001.jpeg */,
 			);
 			path = MaiziLaundry;
 			sourceTree = "<group>";
@@ -250,6 +253,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				20723E201C5A01F3007E5013 /* LaunchScreen.storyboard in Resources */,
+				20B9734F1CA6A30200A9ADE9 /* C001.jpeg in Resources */,
 				20723E1D1C5A01F3007E5013 /* Assets.xcassets in Resources */,
 				20723E1B1C5A01F3007E5013 /* Main.storyboard in Resources */,
 			);

@@ -14,53 +14,43 @@
 
 
 import UIKit
-import Alamofire
 
 class MZRequest: NSObject {
 
     //MARK: - 请求件洗衣物数据
-//    static func getClothes(){
-//        
-//        Alamofire.request(.GET, "http://cloud.bmob.cn/7c930767cf01bdb2/getJianXiClotheList?")
-//            
-//        .responseJSON { (response) -> Void in
-//            
-//            print(response.request)  // original URL request
-//            print(response.response) // URL response
-//            print(response.data)     // server data
-//            print(response.result)   // result of response serialization
-//            
-//            if let JSON = response.result.value {
-//                print("JSON: \(JSON)")
-//            }
-//        }
-//    }
-    
     
     static func getClothes(success succeed:(clothes: NSArray) -> Void, failure failed:(error:NSError) -> Void) -> Void {
         
-        Alamofire.request(.GET, "http://cloud.bmob.cn/7c930767cf01bdb2/index?")
+        let aQuery = AVQuery(className: "clothePrices")
+        aQuery.selectKeys(["clotheName", "clotheImage", "clothePrice"])
+        aQuery.findObjectsInBackgroundWithBlock { (object, error) -> Void in
             
-            .responseJSON { (response) -> Void in
+            print(object)
+            
+            
+            let origionData = object as NSArray
+            
+            let clothesArray = NSMutableArray()
+            // 原始数组里面遍历  单个元素
+            for item in origionData {
                 
-                print(response.request)  // original URL request
-                print(response.response) // URL response
-                print(response.data)     // server data
-                print(response.result)   // result of response serialization
-                
-                if let JSON = response.result.value {
+                // 判断单个 元素的数据类型
+                if item is AVObject {
+                    
+                    let oneClotheDictionary = NSMutableDictionary()
+                    for key in item.allKeys {
+                        
+                        oneClotheDictionary.setObject(item.objectForKey(key) as! String, forKey: key as! String)
+                    }
                     
                     
-                    let dic: NSDictionary = JSON as! NSDictionary
-                    let array = dic["results"] as! NSArray
-                    print(array)
-                    succeed(clothes: array)
+                    clothesArray.addObject(oneClotheDictionary)
                 }
-                
-                if let error = response.result.error {
-                    failed(error: error)
-                }
+            }
+            
+            succeed(clothes: clothesArray)
         }
+        
     }
-    
+
 }

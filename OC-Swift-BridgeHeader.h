@@ -9,7 +9,8 @@
 #ifndef OC_Swift_BridgeHeader_h
 #define OC_Swift_BridgeHeader_h
 
-#import "Bmob.h"
+
+#import "AVOSCloud.h"
 
 #endif /* OC_Swift_BridgeHeader_h */
 

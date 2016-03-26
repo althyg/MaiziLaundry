@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
-        Bmob.registerWithAppKey("2f6c92db1da634299baf58aa60c36c45")
+        AVOSCloud.setApplicationId("6ayCVyh1XmoeNAl83XFE6uWF-gzGzoHsz", clientKey: "ShPcDDPpBomYfDIKLT5X7WYS")
         
         return true
     }
