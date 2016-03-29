@@ -19,10 +19,11 @@ class MZRequest: NSObject {
 
     //MARK: - 请求件洗衣物数据
     
-    static func getClothes(success succeed:(clothes: NSArray) -> Void, failure failed:(error:NSError) -> Void) -> Void {
+    static func getClothes(seasonIndex seasonIndex:Int, success succeed:(clothes: NSArray) -> Void, failure failed:(error:NSError) -> Void) -> Void {
         
         let aQuery = AVQuery(className: "clothePrices")
         aQuery.selectKeys(["clotheName", "clotheImage", "clothePrice"])
+        aQuery.whereKey("season", equalTo: "\(seasonIndex)")
         aQuery.findObjectsInBackgroundWithBlock { (object, error) -> Void in
             
             print(object)

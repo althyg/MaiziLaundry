@@ -8,8 +8,12 @@
 
 import UIKit
 
+protocol MLMenuDelegate {
+    func selectedMenu(index:Int) -> Void
+}
+
 class MLMenuView: UIView {
-    
+    var delegate:MLMenuDelegate?
     // 重载
     override func layoutSubviews() {
         
@@ -26,9 +30,16 @@ class MLMenuView: UIView {
             titleBtn.setTitleColor(UIColor.grayColor(), forState: UIControlState.Normal)
             titleBtn.setTitle(title, forState: UIControlState.Normal)
             titleBtn.backgroundColor = UIColor.whiteColor()
+            titleBtn.tag = i+1
+            titleBtn.addTarget(self, action: #selector(MLMenuView.menuPressed(_:)), forControlEvents: .TouchUpInside)
             self.addSubview(titleBtn)
             
-            i++
+            i += 1
         }
+    }
+    
+    
+    func menuPressed(btn: UIButton) -> Void {
+        self.delegate?.selectedMenu(btn.tag)
     }
 }

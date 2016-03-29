@@ -9,8 +9,13 @@
 import UIKit
 
 
-class ClotheTypeController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+class ClotheTypeController: UIViewController,
+UICollectionViewDataSource,
+UICollectionViewDelegate,
+UICollectionViewDelegateFlowLayout,
+MLMenuDelegate{
 
+    @IBOutlet weak var menuView: MLMenuView!
     @IBOutlet weak var collectionView: UICollectionView!
     
     // 单件数组
@@ -19,10 +24,12 @@ class ClotheTypeController: UIViewController, UICollectionViewDataSource, UIColl
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        menuView.delegate = self
         collectionView.delegate = self
         collectionView.dataSource = self
         // 从服务器拿数据
-        self.getClotheList()
+        self.getClotheList(1)
         
         print("UI 加载到内存结束  001")
     }
@@ -50,16 +57,9 @@ class ClotheTypeController: UIViewController, UICollectionViewDataSource, UIColl
     
     
     
-    
-    
-    
-    
-    
-    
-    
     //MARK: - 获取数据
-    func getClotheList(){
-        MZRequest.getClothes(success: { (clothes) -> Void in
+    func getClotheList(seasonIndex: Int){
+        MZRequest.getClothes(seasonIndex: seasonIndex, success: { (clothes) -> Void in
             
             // 请求成功
             print(clothes)
@@ -146,14 +146,10 @@ class ClotheTypeController: UIViewController, UICollectionViewDataSource, UIColl
     
     
     
-    /*
-    // MARK: - Navigation
+    //MARK: - 菜单代理方法实现
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func selectedMenu(index: Int) {
+        
+        self.getClotheList(index)
     }
-    */
-
 }

@@ -66,7 +66,7 @@ class UserController: UIViewController {
                 (CGRectGetWidth(view.frame)-40),
                 (CGRectGetWidth(view.frame)-40))
             btn.setImage(UIImage(named: iamgeName), forState: .Normal)
-            btn.addTarget(self, action: "buttonPressed:", forControlEvents: .TouchUpInside)
+            btn.addTarget(self, action: #selector(UserController.buttonPressed(_:)), forControlEvents: .TouchUpInside)
             
             let label = UILabel(frame: CGRectMake(0, CGRectGetMaxY(btn.frame), CGRectGetWidth(view.frame), 30))
             label.text = titles[index]
@@ -78,7 +78,7 @@ class UserController: UIViewController {
             self.contentView.addSubview(view)
             
             print(index)
-            index++
+            index += 1
         }
     }
     
