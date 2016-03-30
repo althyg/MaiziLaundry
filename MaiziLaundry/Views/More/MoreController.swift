@@ -22,6 +22,13 @@ class MoreController: UIViewController, UITableViewDelegate, UITableViewDataSour
         self.tabelView.dataSource = self
         self.tabelView.registerClass(MoreCell.self, forCellReuseIdentifier: "moreCell")
         self.tabelView.separatorStyle = .None
+        
+        
+        let logOutBtn = UIButton(type:.Custom)
+        logOutBtn.frame = CGRectMake(10, 30, CGRectGetWidth(self.view.frame)-20, 40)
+        logOutBtn.setTitle("退出", forState: .Normal)
+        self.tabelView.tableFooterView = UIView(frame: CGRectMake(0, 0, CGRectGetWidth(self.view.frame), 200))
+        self.tabelView.tableFooterView?.addSubview(logOutBtn)
     }
 
     override func didReceiveMemoryWarning() {

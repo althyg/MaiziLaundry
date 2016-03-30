@@ -28,7 +28,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if self.isLogedIn() {
             print("")
         } else {
-            let navVC = window?.rootViewController as! UINavigationController
+            let tabBarVC = window?.rootViewController as! UITabBarController
+            let navVC = tabBarVC.viewControllers![0] as! UINavigationController
             navVC.pushViewController(logInVC, animated: false)
         }
         
