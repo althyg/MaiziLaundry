@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="QUt-V5-4iO">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Log In Controller-->
+        <scene sceneID="b8c-9r-lNb">
+            <objects>
+                <viewController storyboardIdentifier="logInWithPhone" id="QUt-V5-4iO" customClass="LogInController" customModule="MaiziLaundry" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NLp-gO-usp"/>
+                        <viewControllerLayoutGuide type="bottom" id="hcQ-aV-9RP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="t6e-Ia-yQg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="用户名／邮箱" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dQh-IF-Ice">
+                                <rect key="frame" x="20" y="103" width="280" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入验证码" textAlignment="natural" minimumFontSize="17" background="请输入密码" translatesAutoresizingMaskIntoConstraints="NO" id="8P2-hn-Lku">
+                                <rect key="frame" x="20" y="158" width="280" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kRb-U8-pPx">
+                                <rect key="frame" x="20" y="267" width="280" height="34"/>
+                                <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="登陆"/>
+                                <connections>
+                                    <action selector="logInPressed:" destination="QUt-V5-4iO" eventType="touchUpInside" id="DQt-Oy-d2k"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gNR-GZ-8qk">
+                                <rect key="frame" x="270" y="320" width="30" height="30"/>
+                                <state key="normal" title="注册"/>
+                                <connections>
+                                    <action selector="toSignIn:" destination="QUt-V5-4iO" eventType="touchUpInside" id="jxb-NZ-fls"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="inputPasswordTF" destination="8P2-hn-Lku" id="KUK-2I-OMK"/>
+                        <outlet property="inputUserNameTF" destination="dQh-IF-Ice" id="w7A-BD-okT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0FY-Gl-SIR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="386" y="355"/>
+        </scene>
+        <!--Sign In Controller-->
+        <scene sceneID="elK-Bg-Ex7">
+            <objects>
+                <viewController storyboardIdentifier="signVC" id="7dU-LJ-QJ5" customClass="SignInController" customModule="MaiziLaundry" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0fo-qE-bMg"/>
+                        <viewControllerLayoutGuide type="bottom" id="Jmv-Ac-PaO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sIk-VV-Hn1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入用户名" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZeW-zQ-cFf">
+                                <rect key="frame" x="20" y="75" width="280" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入验证码" textAlignment="natural" minimumFontSize="17" background="请输入密码" translatesAutoresizingMaskIntoConstraints="NO" id="AZF-L1-fnM">
+                                <rect key="frame" x="20" y="130" width="280" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入邮箱" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="91h-nG-IEX">
+                                <rect key="frame" x="20" y="182" width="280" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="De2-Zr-tAb">
+                                <rect key="frame" x="20" y="256" width="280" height="34"/>
+                                <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="注册"/>
+                                <connections>
+                                    <action selector="logInPressed:" destination="QUt-V5-4iO" eventType="touchUpInside" id="f3h-5n-SFa"/>
+                                    <action selector="signInBtnPressed:" destination="7dU-LJ-QJ5" eventType="touchUpInside" id="89R-QD-hAh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="inputEmailTF" destination="91h-nG-IEX" id="mPp-Xp-uN6"/>
+                        <outlet property="inputPasswordTF" destination="AZF-L1-fnM" id="bfd-Up-n9N"/>
+                        <outlet property="inputUserNameTF" destination="ZeW-zQ-cFf" id="o9x-T6-AHR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yuk-dC-6k1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="386" y="1000"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="请输入密码" width="28" height="38"/>
+    </resources>
+</document>

@@ -16,6 +16,8 @@ class HomeController: UIViewController {
         super.viewDidLoad()
 
         self.navigationItem.title = "麦子洗衣"
+//        print(self.navigationController!.navigationBar)
+//        self.navigationController.navigationBar.addSubview()
         
         
         washBagVC = self.storyboard?.instantiateViewControllerWithIdentifier("washBagVC") as? WashBagController

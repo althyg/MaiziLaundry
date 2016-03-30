@@ -18,6 +18,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         AVOSCloud.setApplicationId("6ayCVyh1XmoeNAl83XFE6uWF-gzGzoHsz", clientKey: "ShPcDDPpBomYfDIKLT5X7WYS")
         
+        
+        
+        let userStoryboard: UIStoryboard = UIStoryboard.init(name: "Users", bundle: NSBundle.mainBundle())
+        let logInVC = userStoryboard.instantiateViewControllerWithIdentifier("logInWithPhone")
+        
+        
+        // 检查是否已经登陆
+        if self.isLogedIn() {
+            print("")
+        } else {
+            let navVC = window?.rootViewController as! UINavigationController
+            navVC.pushViewController(logInVC, animated: false)
+        }
+        
+        
         return true
     }
 
@@ -43,6 +58,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    
+    
+    //MARK: - 检测用户登陆与否情况
+    func isLogedIn() -> Bool {
+        
+        var logInState:Bool?
+        
+        let userDefault = NSUserDefaults.standardUserDefaults()
+        let state = userDefault.objectForKey("isLogedIn")
+        if ((state?.boolValue) != nil) {
+            logInState = true
+        } else {
+            logInState = false
+        }
+        return logInState!
+    }
 
 }
 
