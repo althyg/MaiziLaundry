@@ -53,6 +53,7 @@ class LogInController: UIViewController {
     @IBAction func toSignIn(sender: AnyObject) {
         
         let signVC = self.storyboard?.instantiateViewControllerWithIdentifier("signVC")
+//        signVC = SignInController()
         self.navigationController?.pushViewController(signVC!, animated: true)
     }
     

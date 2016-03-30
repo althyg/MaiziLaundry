@@ -11,6 +11,7 @@ import UIKit
 class MoreController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tabelView: UITableView!
+    var logOutBtn: UIButton?
     
     let titles = ["练习客服", "常见问题", "服务范围", "关于我们", "用户协议", "意见反馈"]
     
@@ -23,12 +24,14 @@ class MoreController: UIViewController, UITableViewDelegate, UITableViewDataSour
         self.tabelView.registerClass(MoreCell.self, forCellReuseIdentifier: "moreCell")
         self.tabelView.separatorStyle = .None
         
-        
-        let logOutBtn = UIButton(type:.Custom)
-        logOutBtn.frame = CGRectMake(10, 30, CGRectGetWidth(self.view.frame)-20, 40)
-        logOutBtn.setTitle("退出", forState: .Normal)
+        // 用户退出按钮
+        logOutBtn = UIButton(type:.Custom)
+        logOutBtn!.frame = CGRectMake(10, 30, CGRectGetWidth(self.view.frame)-20, 40)
+        logOutBtn!.setTitle("退出", forState: .Normal)
+        logOutBtn!.backgroundColor = UIColor.orangeColor()
+        logOutBtn!.addTarget(self, action: #selector(MoreController.logOutAction(_:)), forControlEvents: .TouchUpInside)
         self.tabelView.tableFooterView = UIView(frame: CGRectMake(0, 0, CGRectGetWidth(self.view.frame), 200))
-        self.tabelView.tableFooterView?.addSubview(logOutBtn)
+        self.tabelView.tableFooterView?.addSubview(logOutBtn!)
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,6 +39,19 @@ class MoreController: UIViewController, UITableViewDelegate, UITableViewDataSour
         // Dispose of any resources that can be recreated.
     }
     
+    // MARK - 退出操作
+    func logOutAction(btn: UIButton) -> Void {
+        
+        AVUser.logOut()
+//        print(AVUser.currentUser())
+        
+        let userDefault = NSUserDefaults.standardUserDefaults()
+        print("用户名:\(userDefault.objectForKey("isLogedIn"))")
+        print("邮箱:\(userDefault.objectForKey("email"))")
+        
+        userDefault.setObject("0", forKey: "isLogedIn")
+        logOutBtn!.setTitle("登陆", forState: .Normal)
+    }
 
     /*
     // MARK: - Navigation
