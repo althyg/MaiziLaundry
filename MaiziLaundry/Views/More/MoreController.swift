@@ -39,29 +39,31 @@ class MoreController: UIViewController, UITableViewDelegate, UITableViewDataSour
         // Dispose of any resources that can be recreated.
     }
     
-    // MARK - 退出操作
+    
+    
+    
+    //MARK: - 退出操作
     func logOutAction(btn: UIButton) -> Void {
-        
-        AVUser.logOut()
-//        print(AVUser.currentUser())
         
         let userDefault = NSUserDefaults.standardUserDefaults()
         print("用户名:\(userDefault.objectForKey("isLogedIn"))")
         print("邮箱:\(userDefault.objectForKey("email"))")
         
-        userDefault.setObject("0", forKey: "isLogedIn")
-        logOutBtn!.setTitle("登陆", forState: .Normal)
+        
+        // 一个按钮控制登陆与退出
+        if ((btn.titleLabel?.text?.containsString("退"))?.boolValue == true) {
+            
+            AVUser.logOut()
+            userDefault.setObject("0", forKey: "isLogedIn")
+            logOutBtn!.setTitle("登陆", forState: .Normal)
+        } else {
+            let userSB = UIStoryboard.init(name: "Users", bundle: NSBundle.mainBundle())
+            let logInVC = userSB.instantiateViewControllerWithIdentifier("logIn")
+            self.navigationController?.pushViewController(logInVC, animated: true)
+            logOutBtn!.setTitle("退出", forState: .Normal)
+        }
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1

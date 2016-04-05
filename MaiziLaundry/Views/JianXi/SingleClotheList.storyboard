@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="I98-z1-Z2i">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Select Single Clothe-->
+        <scene sceneID="W2y-2N-CYC">
+            <objects>
+                <viewController storyboardIdentifier="singleClothe" id="I98-z1-Z2i" customClass="SelectSingleClothe" customModule="MaiziLaundry" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1F6-Z1-lJT"/>
+                        <viewControllerLayoutGuide type="bottom" id="PkA-jW-d2T"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8iI-fF-52m">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1n7-kP-D6M" userLabel="blackView">
+                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="gyn-z8-vxp" appends="YES" id="O7k-dt-RjS"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hkT-2p-3mY">
+                                <rect key="frame" x="10" y="218" width="300" height="270"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="D-6" translatesAutoresizingMaskIntoConstraints="NO" id="LEP-hu-Sly">
+                                        <rect key="frame" x="8" y="8" width="99" height="96"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="68／袋" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mvH-Jf-y6w">
+                                        <rect key="frame" x="115" y="45" width="55" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="袋洗" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aMj-WG-RVB">
+                                        <rect key="frame" x="115" y="16" width="34" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="装多少阿凡达睡觉咯阿萨德减肥 i 哦额挖掘佛 is 的减肥我就佛 i 啊电视剧发低烧减肥 i 快点减肥 i 哦减肥 i 阿萨德看来放假诶了五块" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="8AT-Ke-WdO">
+                                        <rect key="frame" x="115" y="79" width="177" height="58"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j0F-e9-vlb">
+                                        <rect key="frame" x="22" y="142" width="240" height="48"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5zK-Mw-dRE">
+                                        <rect key="frame" x="32" y="212" width="220" height="34"/>
+                                        <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="加入购物车"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="270" id="kcq-Bf-YlN"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="hkT-2p-3mY" secondAttribute="trailing" constant="10" id="2iV-fM-eL3"/>
+                            <constraint firstAttribute="trailing" secondItem="1n7-kP-D6M" secondAttribute="trailing" id="6AH-dd-3eN"/>
+                            <constraint firstItem="1n7-kP-D6M" firstAttribute="leading" secondItem="8iI-fF-52m" secondAttribute="leading" id="BEU-Y0-XvY"/>
+                            <constraint firstItem="1n7-kP-D6M" firstAttribute="leading" secondItem="8iI-fF-52m" secondAttribute="leading" id="GVs-8c-YNE"/>
+                            <constraint firstItem="hkT-2p-3mY" firstAttribute="leading" secondItem="8iI-fF-52m" secondAttribute="leading" constant="10" id="KZV-gm-1U6"/>
+                            <constraint firstItem="1n7-kP-D6M" firstAttribute="top" secondItem="1F6-Z1-lJT" secondAttribute="bottom" id="jUd-4L-JMm"/>
+                            <constraint firstItem="hkT-2p-3mY" firstAttribute="leading" secondItem="8iI-fF-52m" secondAttribute="leading" constant="10" id="l39-07-moX"/>
+                            <constraint firstItem="PkA-jW-d2T" firstAttribute="top" secondItem="1n7-kP-D6M" secondAttribute="bottom" id="lFX-lC-U2T"/>
+                            <constraint firstAttribute="trailing" secondItem="hkT-2p-3mY" secondAttribute="trailing" constant="10" id="rxy-N8-Ri4"/>
+                            <constraint firstAttribute="trailing" secondItem="1n7-kP-D6M" secondAttribute="trailing" id="uYp-4S-Y9C"/>
+                            <constraint firstItem="PkA-jW-d2T" firstAttribute="top" secondItem="hkT-2p-3mY" secondAttribute="bottom" constant="80" id="xhm-Ar-wQb"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="gyn-z8-vxp" appends="YES" id="bHP-xc-2lX"/>
+                        </connections>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="addNumberView" destination="j0F-e9-vlb" id="ZVH-Cn-fRq"/>
+                        <outlet property="backgroundView" destination="1n7-kP-D6M" id="rLG-va-pDa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3q6-0i-ncx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="gyn-z8-vxp">
+                    <connections>
+                        <action selector="tapGestureRcognizerAction:" destination="I98-z1-Z2i" id="6Gh-25-Jem"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1" y="-132"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="D-6" width="126" height="140"/>
+    </resources>
+</document>

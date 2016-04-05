@@ -27,6 +27,8 @@
 		20C2CEC21C80862F0096BEC1 /* LFullPayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C2CEC11C80862F0096BEC1 /* LFullPayCell.swift */; };
 		20C2CEC41C8086830096BEC1 /* LaundryDiscountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C2CEC31C8086830096BEC1 /* LaundryDiscountCell.swift */; };
 		20C2CEC61C8086A90096BEC1 /* LUserProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C2CEC51C8086A90096BEC1 /* LUserProfileCell.swift */; };
+		20C96C171CAD14A90046A927 /* SingleClotheList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20C96C161CAD14A90046A927 /* SingleClotheList.storyboard */; };
+		20C96C191CAD14E70046A927 /* SelectSingleClothe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C96C181CAD14E70046A927 /* SelectSingleClothe.swift */; };
 		20F115351C994A27008977E9 /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F115341C994A27008977E9 /* UserController.swift */; };
 		20F6B80B1C608518004834F9 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F6B80A1C608518004834F9 /* HomeController.swift */; };
 		20F6B80F1C6093F3004834F9 /* ClotheCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F6B80E1C6093F3004834F9 /* ClotheCell.swift */; };
@@ -55,6 +57,8 @@
 		20C2CEC11C80862F0096BEC1 /* LFullPayCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LFullPayCell.swift; sourceTree = "<group>"; };
 		20C2CEC31C8086830096BEC1 /* LaundryDiscountCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaundryDiscountCell.swift; sourceTree = "<group>"; };
 		20C2CEC51C8086A90096BEC1 /* LUserProfileCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LUserProfileCell.swift; sourceTree = "<group>"; };
+		20C96C161CAD14A90046A927 /* SingleClotheList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SingleClotheList.storyboard; sourceTree = "<group>"; };
+		20C96C181CAD14E70046A927 /* SelectSingleClothe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectSingleClothe.swift; sourceTree = "<group>"; };
 		20F115341C994A27008977E9 /* UserController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
 		20F6B80A1C608518004834F9 /* HomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		20F6B80E1C6093F3004834F9 /* ClotheCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClotheCell.swift; sourceTree = "<group>"; };
@@ -150,6 +154,8 @@
 			children = (
 				20C2CEB61C803A320096BEC1 /* ClotheTypeController.swift */,
 				20C2CEB81C803B770096BEC1 /* MLMenuView.swift */,
+				20C96C161CAD14A90046A927 /* SingleClotheList.storyboard */,
+				20C96C181CAD14E70046A927 /* SelectSingleClothe.swift */,
 			);
 			path = JianXi;
 			sourceTree = "<group>";
@@ -274,6 +280,7 @@
 				20B9734F1CA6A30200A9ADE9 /* C001.jpeg in Resources */,
 				20723E1D1C5A01F3007E5013 /* Assets.xcassets in Resources */,
 				20723E1B1C5A01F3007E5013 /* Main.storyboard in Resources */,
+				20C96C171CAD14A90046A927 /* SingleClotheList.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,6 +339,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20C96C191CAD14E70046A927 /* SelectSingleClothe.swift in Sources */,
 				20C2CEB91C803B770096BEC1 /* MLMenuView.swift in Sources */,
 				20F6B80B1C608518004834F9 /* HomeController.swift in Sources */,
 				205ED9031C9BDEDE001D7A00 /* MoreController.swift in Sources */,

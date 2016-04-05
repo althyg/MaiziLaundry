@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         let userStoryboard: UIStoryboard = UIStoryboard.init(name: "Users", bundle: NSBundle.mainBundle())
-        let logInVC = userStoryboard.instantiateViewControllerWithIdentifier("logInWithPhone")
+        let logInVC = userStoryboard.instantiateViewControllerWithIdentifier("logIn")
         
         
         // 检查是否已经登陆

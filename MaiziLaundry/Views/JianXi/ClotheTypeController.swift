@@ -18,6 +18,9 @@ MLMenuDelegate{
     @IBOutlet weak var menuView: MLMenuView!
     @IBOutlet weak var collectionView: UICollectionView!
     
+    
+    var selectSingleClotheVC: SelectSingleClothe?
+    
     // 单件数组
     var clotheArray = NSArray()
     
@@ -28,6 +31,23 @@ MLMenuDelegate{
         menuView.delegate = self
         collectionView.delegate = self
         collectionView.dataSource = self
+        
+        
+        let flowLayout = UICollectionViewFlowLayout()
+        flowLayout.itemSize = CGSizeMake((CGRectGetWidth(self.view.frame)-40)/2,
+                                          (CGRectGetWidth(self.view.frame)-40)/2+40)
+        flowLayout.sectionInset = UIEdgeInsetsMake(10, 15, 10, 15)
+        collectionView.collectionViewLayout = flowLayout
+        
+        
+        let singleClotheStoryboard = UIStoryboard.init(name: "SingleClotheList", bundle: NSBundle.mainBundle())
+        selectSingleClotheVC = singleClotheStoryboard.instantiateViewControllerWithIdentifier("singleClothe") as? SelectSingleClothe
+        self.addChildViewController(selectSingleClotheVC!)
+        self.view.addSubview((selectSingleClotheVC?.view)!)
+        selectSingleClotheVC?.view.hidden = true
+        
+        
+        
         // 从服务器拿数据
         self.getClotheList(1)
         
@@ -132,24 +152,21 @@ MLMenuDelegate{
         return item
     }
     
-    // 简单布局 item
-//    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
-//        
-//        let width = (CGRectGetWidth(self.collectionView.frame)-16)/2
-//        let itemSize = CGSizeMake(width, 180)
-//        return itemSize
-//    }
-    
-    
-    
-    
-    
-    
     
     //MARK: - 菜单代理方法实现
 
     func selectedMenu(index: Int) {
         
         self.getClotheList(index)
+    }
+    
+    
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        
+        print("")
+        if selectSingleClotheVC?.view.superview == nil {
+            self.view.addSubview((selectSingleClotheVC?.view)!)
+        }
+        selectSingleClotheVC?.view.hidden = false
     }
 }

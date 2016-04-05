@@ -8,7 +8,7 @@
         <!--Log In Controller-->
         <scene sceneID="b8c-9r-lNb">
             <objects>
-                <viewController storyboardIdentifier="logInWithPhone" id="QUt-V5-4iO" customClass="LogInController" customModule="MaiziLaundry" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="logIn" id="QUt-V5-4iO" customClass="LogInController" customModule="MaiziLaundry" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NLp-gO-usp"/>
                         <viewControllerLayoutGuide type="bottom" id="hcQ-aV-9RP"/>

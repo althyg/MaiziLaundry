@@ -361,17 +361,18 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="qD4-Ok-pzC" firstAttribute="top" secondItem="Vnx-rz-gXl" secondAttribute="bottom" constant="50" id="1Ks-7S-UQL"/>
                             <constraint firstItem="Vnx-rz-gXl" firstAttribute="leading" secondItem="EBr-fD-Zsi" secondAttribute="leading" constant="10" id="8bE-CF-kk2"/>
-                            <constraint firstItem="qD4-Ok-pzC" firstAttribute="top" secondItem="KwR-zS-GXN" secondAttribute="bottom" id="CKb-W5-2KA"/>
-                            <constraint firstItem="qD4-Ok-pzC" firstAttribute="top" secondItem="Vnx-rz-gXl" secondAttribute="bottom" constant="50" id="FTk-eP-m2p"/>
+                            <constraint firstItem="KwR-zS-GXN" firstAttribute="top" secondItem="wen-zD-2i4" secondAttribute="bottom" id="NgO-JK-YYo"/>
                             <constraint firstAttribute="trailing" secondItem="Vnx-rz-gXl" secondAttribute="trailing" constant="10" id="TvX-Ow-fcw"/>
-                            <constraint firstItem="KwR-zS-GXN" firstAttribute="top" secondItem="wen-zD-2i4" secondAttribute="bottom" id="kQ4-qr-All"/>
                             <constraint firstItem="KwR-zS-GXN" firstAttribute="leading" secondItem="EBr-fD-Zsi" secondAttribute="leading" id="rLv-Mm-3w9"/>
                             <constraint firstAttribute="trailing" secondItem="KwR-zS-GXN" secondAttribute="trailing" id="x8F-qn-8vK"/>
+                            <constraint firstItem="qD4-Ok-pzC" firstAttribute="top" secondItem="KwR-zS-GXN" secondAttribute="bottom" id="zB4-zZ-tTA"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="addBagNumberView" destination="Sfn-qh-b4A" id="odr-9S-Y9w"/>
                         <outlet property="backgroundBlackView" destination="KwR-zS-GXN" id="Xue-vH-YfS"/>
                     </connections>
                 </viewController>
