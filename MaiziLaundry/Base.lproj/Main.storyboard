@@ -349,7 +349,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zbg-6t-yay">
                                         <rect key="frame" x="32" y="212" width="220" height="34"/>
                                         <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal" title="加入购物车"/>
+                                        <state key="normal" title="加入洗衣篮"/>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -577,7 +577,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="CWc-Gd-cF2">
             <objects>
-                <tabBarController id="OSh-vd-xPp" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="mianTabBarVC" id="OSh-vd-xPp" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="d6x-Ry-RfT"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="gqu-PM-0bc">

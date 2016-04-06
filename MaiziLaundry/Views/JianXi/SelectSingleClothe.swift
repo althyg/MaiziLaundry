@@ -13,6 +13,10 @@ class SelectSingleClothe: UIViewController {
     @IBOutlet weak var backgroundView: UIView!
     @IBOutlet weak var addNumberView: UIView!
     
+    var clotheDic: NSMutableDictionary?
+    
+    let numberOfClothe = UILabel()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,12 +35,14 @@ class SelectSingleClothe: UIViewController {
 
     @IBAction func tapGestureRcognizerAction(sender: UITapGestureRecognizer) {
         
+        self.removieSelf()
+    }
+    
+    func removieSelf() -> Void {
         if self.view.superview != nil{
             self.view.removeFromSuperview()
         }
     }
-    
-    
     
 
     func initAddNumberViews() -> Void {
@@ -46,7 +52,8 @@ class SelectSingleClothe: UIViewController {
         
         let lessButton = UIButton(type: .Custom)
         let addButton = UIButton(type: .Custom)
-        let numberOfClothe = UILabel()
+        numberOfClothe.text = "0"
+        
         
         lessButton.setTitle("－", forState: .Normal)
         lessButton.setTitleColor(UIColor.blackColor(), forState: .Normal)
@@ -55,6 +62,7 @@ class SelectSingleClothe: UIViewController {
                                       buttonsWidth,
                                       CGRectGetHeight(addNumberView.frame)-2)
         lessButton.backgroundColor = UIColor.whiteColor()
+        lessButton.addTarget(self, action: #selector(SelectSingleClothe.lessButtonAction), forControlEvents: .TouchUpInside)
         
         
         
@@ -65,7 +73,7 @@ class SelectSingleClothe: UIViewController {
                                      buttonsWidth,
                                      CGRectGetHeight(addNumberView.frame)-2)
         addButton.backgroundColor = UIColor.whiteColor()
-        
+        addButton.addTarget(self, action: #selector(SelectSingleClothe.addButtonAction), forControlEvents: .TouchUpInside)
         
         
         
@@ -82,4 +90,48 @@ class SelectSingleClothe: UIViewController {
         addNumberView.addSubview(addButton)
     }
     
+    //MARK: - 减法
+    func lessButtonAction() -> Void {
+        if numberOfClothe.text != "0" {
+            
+            var curruntNumber = Int(numberOfClothe.text!)!
+            curruntNumber -= 1
+            numberOfClothe.text = "\(curruntNumber)"
+        } else {
+            numberOfClothe.text = "0"
+        }
+    }
+    
+    //MARK: - 加法
+    func addButtonAction() -> Void {
+        
+        var curruntNumber = Int(numberOfClothe.text!)!
+        curruntNumber += 1
+        numberOfClothe.text = "\(curruntNumber)"
+    }
+    
+    //MARK: - 加入洗衣篮
+    @IBAction func addToBagAction(sender: UIButton) {
+        
+        if numberOfClothe.text != "0" {
+            
+            self.sendNotification()
+            self.removieSelf()
+        }
+    }
+    
+    
+    func sendNotification() -> Void {
+        
+//        let dic = ["clotheNumber":"\(numberOfClothe.text)"]
+        clotheDic?.setObject("\(numberOfClothe.text!)", forKey: "clotheNumber")
+        NSNotificationCenter.defaultCenter().postNotificationName("addSingleClotheToBag", object: clotheDic, userInfo: nil)
+
+    }
+    
+    func startAnimate() -> Void {
+        
+        let bezierPath = UIBezierPath.init(arcCenter: CGPointMake(0, 0), radius: 3, startAngle: 9, endAngle: 4, clockwise: true)
+        
+    }
 }

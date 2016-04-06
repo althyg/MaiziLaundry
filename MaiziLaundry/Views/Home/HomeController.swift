@@ -15,6 +15,7 @@ class HomeController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+//        self.tabBarItem.badgeValue = "9"
         self.navigationItem.title = "麦子洗衣"
 //        print(self.navigationController!.navigationBar)
 //        self.navigationController.navigationBar.addSubview()

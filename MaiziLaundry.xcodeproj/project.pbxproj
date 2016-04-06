@@ -18,6 +18,7 @@
 		20723E1B1C5A01F3007E5013 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20723E191C5A01F3007E5013 /* Main.storyboard */; };
 		20723E1D1C5A01F3007E5013 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20723E1C1C5A01F3007E5013 /* Assets.xcassets */; };
 		20723E201C5A01F3007E5013 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20723E1E1C5A01F3007E5013 /* LaunchScreen.storyboard */; };
+		207978CE1CB4DFE400F66843 /* ClotheModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207978CD1CB4DFE400F66843 /* ClotheModel.swift */; };
 		20893E8B1C74585100394CB0 /* MZRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20893E8A1C74585100394CB0 /* MZRequest.swift */; };
 		20B9734F1CA6A30200A9ADE9 /* C001.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 20B9734E1CA6A30200A9ADE9 /* C001.jpeg */; };
 		20C2CEB71C803A320096BEC1 /* ClotheTypeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C2CEB61C803A320096BEC1 /* ClotheTypeController.swift */; };
@@ -47,6 +48,7 @@
 		20723E1C1C5A01F3007E5013 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		20723E1F1C5A01F3007E5013 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		20723E211C5A01F3007E5013 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		207978CD1CB4DFE400F66843 /* ClotheModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClotheModel.swift; sourceTree = "<group>"; };
 		20893E6B1C72C89600394CB0 /* OC-Swift-BridgeHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "OC-Swift-BridgeHeader.h"; path = "../OC-Swift-BridgeHeader.h"; sourceTree = "<group>"; };
 		20893E8A1C74585100394CB0 /* MZRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MZRequest.swift; sourceTree = "<group>"; };
 		20B9734E1CA6A30200A9ADE9 /* C001.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = C001.jpeg; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 		20723E141C5A01F3007E5013 /* MaiziLaundry */ = {
 			isa = PBXGroup;
 			children = (
+				207978CC1CB4DFBD00F66843 /* common */,
 				20893E871C7457A200394CB0 /* Action */,
 				20F6B8081C6084FE004834F9 /* Views */,
 				20723E151C5A01F3007E5013 /* AppDelegate.swift */,
@@ -138,6 +141,15 @@
 				20B9734E1CA6A30200A9ADE9 /* C001.jpeg */,
 			);
 			path = MaiziLaundry;
+			sourceTree = "<group>";
+		};
+		207978CC1CB4DFBD00F66843 /* common */ = {
+			isa = PBXGroup;
+			children = (
+				207978CD1CB4DFE400F66843 /* ClotheModel.swift */,
+			);
+			name = common;
+			path = Views/common;
 			sourceTree = "<group>";
 		};
 		20893E871C7457A200394CB0 /* Action */ = {
@@ -339,6 +351,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				207978CE1CB4DFE400F66843 /* ClotheModel.swift in Sources */,
 				20C96C191CAD14E70046A927 /* SelectSingleClothe.swift in Sources */,
 				20C2CEB91C803B770096BEC1 /* MLMenuView.swift in Sources */,
 				20F6B80B1C608518004834F9 /* HomeController.swift in Sources */,

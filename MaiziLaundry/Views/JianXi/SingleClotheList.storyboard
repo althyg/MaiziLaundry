@@ -56,7 +56,10 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5zK-Mw-dRE">
                                         <rect key="frame" x="32" y="212" width="220" height="34"/>
                                         <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal" title="加入购物车"/>
+                                        <state key="normal" title="加入洗衣篮"/>
+                                        <connections>
+                                            <action selector="addToBagAction:" destination="I98-z1-Z2i" eventType="touchUpInside" id="fmm-Kh-gbC"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

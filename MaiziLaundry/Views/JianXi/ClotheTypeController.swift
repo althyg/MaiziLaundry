@@ -18,7 +18,7 @@ MLMenuDelegate{
     @IBOutlet weak var menuView: MLMenuView!
     @IBOutlet weak var collectionView: UICollectionView!
     
-    
+        
     var selectSingleClotheVC: SelectSingleClothe?
     
     // 单件数组
@@ -27,6 +27,14 @@ MLMenuDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // 监听加入洗衣篮的操作
+        NSNotificationCenter.defaultCenter().addObserver(self,
+                                                         selector: #selector(ClotheTypeController.getNotificationFromSingleSelector(_:)),
+                                                         name: "addSingleClotheToBag",
+                                                         object: nil)
+        
+        
         
         menuView.delegate = self
         collectionView.delegate = self
@@ -168,5 +176,26 @@ MLMenuDelegate{
             self.view.addSubview((selectSingleClotheVC?.view)!)
         }
         selectSingleClotheVC?.view.hidden = false
+        selectSingleClotheVC?.numberOfClothe.text = "0"
+        selectSingleClotheVC?.clotheDic = clotheArray.objectAtIndex(indexPath.row) as? NSMutableDictionary
     }
+
+    
+    //MARK: - 单件衣服添加洗衣篮通知处理方法
+    func getNotificationFromSingleSelector(object: AnyObject) -> Void {
+        
+        print(object)
+        let cDic = object.object as! NSDictionary
+        // 创建洗衣篮
+        MZRequest.addClotheToBag(data: cDic, succeed: { (success) in
+            
+            if success {
+                print("提交成功")
+            }
+            }) { (error) in
+               
+                print("提交失败:\(error)")
+        }
+    }
+
 }

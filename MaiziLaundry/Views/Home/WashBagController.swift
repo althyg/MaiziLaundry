@@ -80,4 +80,6 @@ class WashBagController: UIViewController {
         addBagNumberView.addSubview(addButton)
     }
 
+    
+    
 }

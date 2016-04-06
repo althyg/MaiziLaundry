@@ -18,8 +18,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         AVOSCloud.setApplicationId("6ayCVyh1XmoeNAl83XFE6uWF-gzGzoHsz", clientKey: "ShPcDDPpBomYfDIKLT5X7WYS")
         
-        
-        
         let userStoryboard: UIStoryboard = UIStoryboard.init(name: "Users", bundle: NSBundle.mainBundle())
         let logInVC = userStoryboard.instantiateViewControllerWithIdentifier("logIn")
         

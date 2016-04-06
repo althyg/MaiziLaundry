@@ -11,7 +11,7 @@ import UIKit
 class LaundryBacket: UIViewController,UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var backetTableVIew: UITableView!
-    
+    var clotheArray: NSArray = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +21,9 @@ class LaundryBacket: UIViewController,UITableViewDelegate, UITableViewDataSource
         
         print(backetTableVIew.frame)
         backetTableVIew.backgroundColor = UIColor.orangeColor()
+        
+        
+        self.getClotheInBag()
     }
 
     override func didReceiveMemoryWarning() {
@@ -59,20 +62,42 @@ class LaundryBacket: UIViewController,UITableViewDelegate, UITableViewDataSource
 //            print(loundryCell.clothImageView)
             
             
-            if indexPath.row == 0 {
+            if clotheArray.count > 0 {
                 
-                loundryCell.clothImageView.image = UIImage(named: "J-0")
-                loundryCell.clotheNameLabel.text = "夹克"
-                loundryCell.clotheNumberV.numberOfClothe.text = "10"
-            } else if indexPath.row == 1 {
-                loundryCell.clothImageView.image = UIImage(named: "J-1")
-                loundryCell.clotheNameLabel.text = "衬衫"
-                loundryCell.clotheNumberV.numberOfClothe.text = "15"
-            } else {
-                loundryCell.clothImageView.image = UIImage(named: "J-2")
-                loundryCell.clotheNameLabel.text = "皮衣"
-                loundryCell.clotheNumberV.numberOfClothe.text = "8"
+                let dic = clotheArray.objectAtIndex(indexPath.row) as! NSDictionary
+                
+                // 衣服单件图片
+                var imageUrl = dic["clotheImage"]! as! NSString
+                imageUrl = imageUrl.stringByRemovingPercentEncoding!
+                
+                let url:NSURL = NSURL(string: imageUrl as String)!
+                let data = NSData(contentsOfURL: url)
+                
+                // 名称
+                let aName = dic["clotheName"]! as! String
+                loundryCell.clotheNameLabel.text = aName
+                
+                // 价格
+                //            let aPrice = dic["clothePrice"]! as! String
+                
+                
+                loundryCell.clothImageView.image = UIImage(data: data!)
             }
+            
+//            if indexPath.row == 0 {
+//                
+//                loundryCell.clothImageView.image = UIImage(named: "J-0")
+//                loundryCell.clotheNameLabel.text = "夹克"
+//                loundryCell.clotheNumberV.numberOfClothe.text = "10"
+//            } else if indexPath.row == 1 {
+//                loundryCell.clothImageView.image = UIImage(named: "J-1")
+//                loundryCell.clotheNameLabel.text = "衬衫"
+//                loundryCell.clotheNumberV.numberOfClothe.text = "15"
+//            } else {
+//                loundryCell.clothImageView.image = UIImage(named: "J-2")
+//                loundryCell.clotheNameLabel.text = "皮衣"
+//                loundryCell.clotheNumberV.numberOfClothe.text = "8"
+//            }
             
             loundryCell.selectionStyle = UITableViewCellSelectionStyle.None
             return loundryCell
@@ -83,4 +108,18 @@ class LaundryBacket: UIViewController,UITableViewDelegate, UITableViewDataSource
         
         return cell!
     }
+    
+    
+    //MARK: 请求用户洗衣篮数据
+    func getClotheInBag() -> Void {
+        
+        MZRequest.getClothesInBagByUserID(userID: "0", succeed: { (clothes) in
+            
+            print(clothes)
+            self.clotheArray = clothes
+            self.backetTableVIew.reloadData()
+            }) { (error) in
+                
+                print(error)
+        }    }
 }
