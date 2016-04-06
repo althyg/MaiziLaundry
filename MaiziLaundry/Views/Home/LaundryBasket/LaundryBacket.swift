@@ -36,31 +36,37 @@ class LaundryBacket: UIViewController,UITableViewDelegate, UITableViewDataSource
     // 分组－－－－两组
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         
-        return 1
+        return 4
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        var retNum = 0
         
+        if section == 0 {
+            
+            retNum = clotheArray.count
+
+        } else if section == 1 {
+            
+            retNum = 1
+        } else if section == 2 {
+            
+            retNum = 1
+        } else {
+            retNum = 1
+        }
         
-        return 6
+        return retNum
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         var cell: UITableViewCell?
-        
-        if indexPath.row == 5 {
-            cell = tableView.dequeueReusableCellWithIdentifier("LUserProfileCell", forIndexPath: indexPath)
-        } else if indexPath.row == 4 {
-            cell = tableView.dequeueReusableCellWithIdentifier("LaundryDiscountCell", forIndexPath: indexPath)
-        } else if indexPath.row == 3 {
-            cell = tableView.dequeueReusableCellWithIdentifier("LFullPayCell", forIndexPath: indexPath)
-        } else {
+    
+        if indexPath.section == 0 {
             
             cell = tableView.dequeueReusableCellWithIdentifier("laundryCell", forIndexPath: indexPath)
             let loundryCell = cell as! LaundryBacketCell
-//            print(loundryCell.clothImageView)
-            
             
             if clotheArray.count > 0 {
                 
@@ -84,27 +90,23 @@ class LaundryBacket: UIViewController,UITableViewDelegate, UITableViewDataSource
                 loundryCell.clothImageView.image = UIImage(data: data!)
             }
             
-//            if indexPath.row == 0 {
-//                
-//                loundryCell.clothImageView.image = UIImage(named: "J-0")
-//                loundryCell.clotheNameLabel.text = "夹克"
-//                loundryCell.clotheNumberV.numberOfClothe.text = "10"
-//            } else if indexPath.row == 1 {
-//                loundryCell.clothImageView.image = UIImage(named: "J-1")
-//                loundryCell.clotheNameLabel.text = "衬衫"
-//                loundryCell.clotheNumberV.numberOfClothe.text = "15"
-//            } else {
-//                loundryCell.clothImageView.image = UIImage(named: "J-2")
-//                loundryCell.clotheNameLabel.text = "皮衣"
-//                loundryCell.clotheNumberV.numberOfClothe.text = "8"
-//            }
             
             loundryCell.selectionStyle = UITableViewCellSelectionStyle.None
             return loundryCell
-            
-        }
-        
 
+        } else if indexPath.section == 1 {
+            
+            cell = tableView.dequeueReusableCellWithIdentifier("LFullPayCell", forIndexPath: indexPath)
+
+        } else if indexPath.section == 2 {
+        
+            cell = tableView.dequeueReusableCellWithIdentifier("LaundryDiscountCell", forIndexPath: indexPath)
+        } else {
+        
+            cell = tableView.dequeueReusableCellWithIdentifier("LUserProfileCell", forIndexPath: indexPath)
+
+        }
+    
         
         return cell!
     }
