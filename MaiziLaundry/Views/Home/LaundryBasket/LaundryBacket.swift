@@ -20,12 +20,16 @@ class LaundryBacket: UIViewController,UITableViewDelegate, UITableViewDataSource
         backetTableVIew.dataSource = self
         
         print(backetTableVIew.frame)
-        backetTableVIew.backgroundColor = UIColor.orangeColor()
+//        backetTableVIew.backgroundColor = UIColor.orangeColor()
         
         
         self.getClotheInBag()
     }
 
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        self.getClotheInBag()
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

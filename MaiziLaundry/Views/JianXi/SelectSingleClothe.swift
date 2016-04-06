@@ -120,7 +120,7 @@ class SelectSingleClothe: UIViewController {
         }
     }
     
-    
+    // 发送一个通知
     func sendNotification() -> Void {
         
 //        let dic = ["clotheNumber":"\(numberOfClothe.text)"]
