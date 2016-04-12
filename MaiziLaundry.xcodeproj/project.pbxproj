@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0D9051A14CF903C4D54551DE /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2256FA88476D4988D4D071A2 /* Pods.framework */; };
+		201310291CBCDC5800998659 /* UserInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201310281CBCDC5800998659 /* UserInfoController.swift */; };
 		205691151C904AE8000672C3 /* WashBagController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205691141C904AE8000672C3 /* WashBagController.swift */; };
 		205ED9031C9BDEDE001D7A00 /* MoreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205ED9021C9BDEDE001D7A00 /* MoreController.swift */; };
 		205ED9051C9BE38C001D7A00 /* MoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205ED9041C9BE38C001D7A00 /* MoreCell.swift */; };
@@ -36,12 +37,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		201310281CBCDC5800998659 /* UserInfoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoController.swift; sourceTree = "<group>"; };
 		205691141C904AE8000672C3 /* WashBagController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WashBagController.swift; sourceTree = "<group>"; };
 		205ED9021C9BDEDE001D7A00 /* MoreController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreController.swift; sourceTree = "<group>"; };
 		205ED9041C9BE38C001D7A00 /* MoreCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreCell.swift; sourceTree = "<group>"; };
 		2063A2871CABA383006BA895 /* LogInController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInController.swift; sourceTree = "<group>"; };
 		2063A2891CABA392006BA895 /* SignInController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInController.swift; sourceTree = "<group>"; };
-		2063A28B1CABA424006BA895 /* Users.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Users.storyboard; sourceTree = "<group>"; };
+		2063A28B1CABA424006BA895 /* Users.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Users.storyboard; path = LogIn/Users.storyboard; sourceTree = "<group>"; };
 		20723E121C5A01F2007E5013 /* MaiziLaundry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MaiziLaundry.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20723E151C5A01F3007E5013 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		20723E1A1C5A01F3007E5013 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -103,7 +105,6 @@
 			children = (
 				2063A2871CABA383006BA895 /* LogInController.swift */,
 				2063A2891CABA392006BA895 /* SignInController.swift */,
-				2063A28B1CABA424006BA895 /* Users.storyboard */,
 			);
 			path = LogIn;
 			sourceTree = "<group>";
@@ -188,8 +189,10 @@
 		20F115331C994A0A008977E9 /* User */ = {
 			isa = PBXGroup;
 			children = (
+				2063A28B1CABA424006BA895 /* Users.storyboard */,
 				20F115341C994A27008977E9 /* UserController.swift */,
 				2063A2861CABA357006BA895 /* LogIn */,
+				201310281CBCDC5800998659 /* UserInfoController.swift */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -361,6 +364,7 @@
 				205ED9051C9BE38C001D7A00 /* MoreCell.swift in Sources */,
 				20C2CEB71C803A320096BEC1 /* ClotheTypeController.swift in Sources */,
 				2063A28A1CABA392006BA895 /* SignInController.swift in Sources */,
+				201310291CBCDC5800998659 /* UserInfoController.swift in Sources */,
 				20F115351C994A27008977E9 /* UserController.swift in Sources */,
 				20C2CEC01C8081530096BEC1 /* LaundryBacketCell.swift in Sources */,
 				20C2CEBC1C8046740096BEC1 /* LaundryBacket.swift in Sources */,
@@ -483,15 +487,18 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_ROOT}/Headers/Public\"",
 					"\"${PODS_ROOT}/Headers/Public/BmobSDK\"/**",
 				);
 				INFOPLIST_FILE = MaiziLaundry/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.alatan.MaiziLaundry;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alatan.MaiziLaundryAlatan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "OC-Swift-BridgeHeader.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -504,15 +511,18 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_ROOT}/Headers/Public\"",
 					"\"${PODS_ROOT}/Headers/Public/BmobSDK\"/**",
 				);
 				INFOPLIST_FILE = MaiziLaundry/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.alatan.MaiziLaundry;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alatan.MaiziLaundryAlatan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "OC-Swift-BridgeHeader.h";
 			};
 			name = Release;

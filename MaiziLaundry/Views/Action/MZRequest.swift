@@ -17,6 +17,7 @@ import UIKit
 
 class MZRequest: NSObject {
 
+//    let a: Array<String>
     //MARK: - 请求件洗衣物数据
     static func getClothes(seasonIndex seasonIndex:Int, success succeed:(clothes: NSArray) -> Void, failure failed:(error:NSError) -> Void) -> Void {
         
@@ -87,6 +88,7 @@ class MZRequest: NSObject {
             
             let origionData = response as NSArray
             let clothesArray = NSMutableArray()
+
             for item in origionData {
                 
                 // 判断单个 元素的数据类型

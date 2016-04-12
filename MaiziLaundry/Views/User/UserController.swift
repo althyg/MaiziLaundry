@@ -87,8 +87,20 @@ class UserController: UIViewController {
     func buttonPressed(btn: UIButton) {
         
         print(btn.tag)
+        
+        if btn.tag == 2 {
+            self.toUserInfo()
+        }
     }
     
+    
+    //MARK: - push 到用户信息修改页面
+    func toUserInfo() -> Void {
+        
+        let uSB = UIStoryboard.init(name: "Users", bundle: NSBundle.mainBundle())
+        let userInfoVC = uSB.instantiateViewControllerWithIdentifier("userInfoVC")
+        self.navigationController?.pushViewController(userInfoVC, animated: true)
+    }
     /*
     // MARK: - Navigation
 
